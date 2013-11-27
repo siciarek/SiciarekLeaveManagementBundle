@@ -1,0 +1,42 @@
+Siciarek\LeaveManagementBundle\Entity\Leave:
+    type: entity
+    table: slm_leave
+    repositoryClass: LeaveRepository
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+
+        type:
+            type: leave
+
+        starts_at:
+            type: date
+
+        ends_at:
+            type: date
+
+        length:
+            type: smallint
+
+        created_at:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updated_at:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: update
+        deleted_at:
+            type: datetime
+            nullable: true
+
+    manyToOne:
+        employee:
+            targetEntity: Employee
+        approved_by:
+            targetEntity: Manager

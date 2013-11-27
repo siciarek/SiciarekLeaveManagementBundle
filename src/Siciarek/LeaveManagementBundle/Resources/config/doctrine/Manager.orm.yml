@@ -1,0 +1,4 @@
+Siciarek\LeaveManagementBundle\Entity\Manager:
+    type: entity
+    table: slm_manager
+    repositoryClass: ManagerRepository

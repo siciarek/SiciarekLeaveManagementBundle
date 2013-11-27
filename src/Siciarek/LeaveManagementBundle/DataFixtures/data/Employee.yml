@@ -1,0 +1,45 @@
+Employee:
+    -
+        manager: true
+        first_name: 'Adrianna'
+        last_name: 'Boniecka'
+        email: 'aboniecka@example.com'
+        enabled: true
+        description: |
+            Manager
+    -
+        manager: true
+        first_name: 'Krystian'
+        last_name: 'Borowiec'
+        email: 'kborowiec@example.com'
+        enabled: true
+        description: |
+            Manager
+    -
+        first_name: 'Michał'
+        last_name: 'Kleczko'
+        email: 'mklecko@example.com'
+        enabled: true
+        description: |
+            Regular employee
+    -
+        first_name: 'Marianna'
+        last_name: 'Luks'
+        email: 'mluks@example.com'
+        enabled: true
+        description: |
+            Regular employee
+    -
+        first_name: 'Wiktor'
+        last_name: 'Pomorski'
+        email: 'wpomorski@example.com'
+        enabled: true
+        description: |
+            Regular employee
+    -
+        first_name: 'Juliusz'
+        last_name: 'Denar'
+        email: 'j.denar@example.com'
+        enabled: true
+        description: |
+            Regular employee

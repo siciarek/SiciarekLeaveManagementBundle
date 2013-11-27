@@ -1,0 +1,44 @@
+Siciarek\LeaveManagementBundle\Entity\Employee:
+    type: entity
+    table: slm_employee
+    repositoryClass: EmployeeRepository
+    inheritanceType: JOINED
+    discriminatorMap:
+        employee: Employee
+        manager: Manager
+    discriminatorColumn:
+        type: string
+        name: discr
+        length: 64
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        first_name: ~
+        last_name: ~
+        email: ~
+        enabled:
+           type: boolean
+        slug:
+            type: string
+            length: 128
+            gedmo:
+                slug:
+                    fields:
+                        - first_name
+                        - last_name
+        created_at:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updated_at:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: update
+        deleted_at:
+            type: datetime
+            nullable: true

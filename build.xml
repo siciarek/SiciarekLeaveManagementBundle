@@ -7,6 +7,7 @@
 
     <property name="phpunit" value="bin/phpunit.bat"/>
     <property name="composer.phar" value="../composer.phar"/>
+    <property name="bundle" value="SiciarekLeaveManagementBundle"/>
     <property name="doc.source.dir" value="src/Siciarek/LeaveManagementBundle/Resources/doc"/>
     <property name="doc.html.target.dir" value="web/docs"/>
     <property name="doc.pdf.target.dir" value="web/docs/pdf"/>
@@ -30,6 +31,12 @@
     </target>
 
     <target name="build" depends="ccx, db, fx"/>
+
+    <target name="ge">
+        <exec executable="${php}">
+            <arg line="app/console doctrine:generate:entities --no-backup ${bundle}"/>
+        </exec>
+    </target>
 
     <target name="db">
 
