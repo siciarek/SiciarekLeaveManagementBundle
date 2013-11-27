@@ -362,4 +362,60 @@ class Leave
     {
         return $this->canceled_by;
     }
+    /**
+     * @var integer
+     */
+    private $working_days;
+
+
+    /**
+     * Set working_days
+     *
+     * @param integer $workingDays
+     * @return Leave
+     */
+    public function setWorkingDays($workingDays)
+    {
+        $this->working_days = $workingDays;
+    
+        return $this;
+    }
+
+    /**
+     * Get working_days
+     *
+     * @return integer 
+     */
+    public function getWorkingDays()
+    {
+        return $this->working_days;
+    }
+    /**
+     * @var string
+     */
+    private $description;
+
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return Leave
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string 
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
 }

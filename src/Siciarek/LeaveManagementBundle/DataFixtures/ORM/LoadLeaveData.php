@@ -35,7 +35,7 @@ class LoadLeaveData extends BaseFixture
             $obj = new Leave();
 
             $employee = $this->getReference('employee-' . $l['employee']);
-            $covered_by = $this->getReference('employee-' . $l['covered_by']);
+            $covered_by = is_integer($l['covered_by']) ? $this->getReference('employee-' . $l['covered_by']) : null;
 
             $obj->setType(LeaveType::getDefault());
             $obj->setStatus(LeaveStatusType::getDefault());
@@ -46,7 +46,8 @@ class LoadLeaveData extends BaseFixture
 
             $length = $this->container->get('slm.leave.length.calculator')->calculate($obj->getStartsAt(), $obj->getEndsAt());
 
-            $obj->setLength($length);
+            $obj->setLength($length['abs']);
+            $obj->setWorkingDays($length['working_days']);
 
             $om->persist($obj);
             $this->setReference('leave-' . ($index++), $obj);

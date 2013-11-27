@@ -24,8 +24,18 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
+        $query = $this->get('doctrine.orm.entity_manager')
+            ->getRepository('SiciarekLeaveManagementBundle:Leave')
+            ->createQueryBuilder('l')
+            ->select('l')
+            ->orderBy('l.starts_at')
+            ->getQuery()
+        ;
+
+        $items = $query->execute();
+
         return array(
-		
+		    'items' => $items,
 		);
     }
 }

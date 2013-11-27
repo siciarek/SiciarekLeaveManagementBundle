@@ -24,6 +24,13 @@ Siciarek\LeaveManagementBundle\Entity\Leave:
         length:
             type: smallint
 
+        working_days:
+            type: smallint
+
+        description:
+            length: 255
+            nullable: true
+
         created_at:
             type: datetime
             gedmo:
@@ -44,6 +51,6 @@ Siciarek\LeaveManagementBundle\Entity\Leave:
         covered_by:
             targetEntity: Employee
         approved_by:
-            targetEntity: Manager
+            targetEntity: Employee
         canceled_by:
-            targetEntity: Manager
+            targetEntity: Employee

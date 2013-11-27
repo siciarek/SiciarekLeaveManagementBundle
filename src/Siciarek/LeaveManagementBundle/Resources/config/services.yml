@@ -2,3 +2,5 @@
 services:
     slm.leave.length.calculator:
         class: Siciarek\LeaveManagementBundle\Services\LeaveLengthCalculator
+        properties:
+            container: @service_container

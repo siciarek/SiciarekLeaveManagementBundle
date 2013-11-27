@@ -2,14 +2,6 @@ Siciarek\LeaveManagementBundle\Entity\Employee:
     type: entity
     table: slm_employee
     repositoryClass: EmployeeRepository
-    inheritanceType: JOINED
-    discriminatorMap:
-        employee: Employee
-        manager: Manager
-    discriminatorColumn:
-        type: string
-        name: discr
-        length: 64
     id:
         id:
             type: integer
@@ -19,8 +11,10 @@ Siciarek\LeaveManagementBundle\Entity\Employee:
         first_name: ~
         last_name: ~
         email: ~
+        is_manager:
+            type: boolean
         enabled:
-           type: boolean
+            type: boolean
         attributable_leave_days_number:
             type: smallint
         slug:
@@ -44,3 +38,8 @@ Siciarek\LeaveManagementBundle\Entity\Employee:
         deleted_at:
             type: datetime
             nullable: true
+
+    manyToOne:
+        manager:
+            targetEntity: Employee
+

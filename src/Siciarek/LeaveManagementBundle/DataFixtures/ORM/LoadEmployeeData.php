@@ -10,7 +10,6 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Yaml\Yaml;
 
 use Siciarek\LeaveManagementBundle\Entity\Employee;
-use Siciarek\LeaveManagementBundle\Entity\Manager;
 
 class LoadEmployeeData extends BaseFixture
 {
@@ -25,16 +24,19 @@ class LoadEmployeeData extends BaseFixture
         foreach ($this->getData('Employee') as $e) {
 
             /**
-             * @var Employee|Manager $obj
+             * @var Employee $obj
              */
-            $role = (array_key_exists('manager', $e) and $e['manager'] === true) ? 'manager' : 'employee';
-            $obj = (array_key_exists('manager', $e) and $e['manager'] === true) ? new Manager(): new Employee();
+            $obj = new Employee();
             $obj->setFirstName($e['first_name']);
             $obj->setLastName($e['last_name']);
             $obj->setEmail($e['email']);
             $obj->setEnabled($e['enabled']);
+            $obj->setIsManager((array_key_exists('manager', $e) and $e['manager'] === true));
             $obj->setAttributableLeaveDaysNumber($e['attributable_leave_days_number']);
-            $this->setReference($role . '-' . $e['id'], $obj);
+
+            $this->setReference('employee-' . $e['id'], $obj);
+
+            $obj->setManager($this->getReference('employee-1'));
 
             $om->persist($obj);
         }
