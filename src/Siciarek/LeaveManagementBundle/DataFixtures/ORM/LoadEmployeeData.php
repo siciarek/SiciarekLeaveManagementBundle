@@ -22,8 +22,6 @@ class LoadEmployeeData extends BaseFixture
      */
     public function load(ObjectManager $om)
     {
-        $index = 1;
-
         foreach ($this->getData('Employee') as $e) {
 
             /**
@@ -35,9 +33,10 @@ class LoadEmployeeData extends BaseFixture
             $obj->setLastName($e['last_name']);
             $obj->setEmail($e['email']);
             $obj->setEnabled($e['enabled']);
+            $obj->setAttributableLeaveDaysNumber($e['attributable_leave_days_number']);
+            $this->setReference($role . '-' . $e['id'], $obj);
 
             $om->persist($obj);
-            $this->setReference($role . '-' . ($index++), $obj);
         }
 
         $om->flush();

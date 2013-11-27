@@ -1,45 +1,75 @@
 Employee:
     -
+        id: 1
         manager: true
         first_name: 'Adrianna'
         last_name: 'Boniecka'
         email: 'aboniecka@example.com'
         enabled: true
+        attributable_leave_days_number: 28
         description: |
             Manager
     -
+        id: 2
         manager: true
         first_name: 'Krystian'
         last_name: 'Borowiec'
         email: 'kborowiec@example.com'
         enabled: true
+        attributable_leave_days_number: 28
         description: |
             Manager
     -
+        id: 3
         first_name: 'Michał'
         last_name: 'Kleczko'
         email: 'mklecko@example.com'
         enabled: true
+        attributable_leave_days_number: 28
         description: |
             Regular employee
     -
+        id: 4
         first_name: 'Marianna'
         last_name: 'Luks'
         email: 'mluks@example.com'
         enabled: true
+        attributable_leave_days_number: 28
         description: |
             Regular employee
     -
+        id: 5
         first_name: 'Wiktor'
         last_name: 'Pomorski'
         email: 'wpomorski@example.com'
         enabled: true
+        attributable_leave_days_number: 28
         description: |
             Regular employee
     -
+        id: 6
         first_name: 'Juliusz'
         last_name: 'Denar'
         email: 'j.denar@example.com'
         enabled: true
+        attributable_leave_days_number: 28
+        description: |
+            Regular employee
+    -
+        id: 7
+        first_name: 'Inez'
+        last_name: 'Kucharska'
+        email: 'ikucharska@example.com'
+        enabled: true
+        attributable_leave_days_number: 28
+        description: |
+            Regular employee
+    -
+        id: 8
+        first_name: 'Dariusz'
+        last_name: 'Liczko'
+        email: 'dliczko@example.com'
+        enabled: true
+        attributable_leave_days_number: 16
         description: |
             Regular employee

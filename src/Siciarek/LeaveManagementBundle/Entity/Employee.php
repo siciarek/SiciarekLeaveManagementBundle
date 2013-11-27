@@ -248,4 +248,32 @@ class Employee
     {
         return $this->email;
     }
+    /**
+     * @var integer
+     */
+    private $attributable_leave_days_number;
+
+
+    /**
+     * Set attributable_leave_days_number
+     *
+     * @param integer $attributableLeaveDaysNumber
+     * @return Employee
+     */
+    public function setAttributableLeaveDaysNumber($attributableLeaveDaysNumber)
+    {
+        $this->attributable_leave_days_number = $attributableLeaveDaysNumber;
+    
+        return $this;
+    }
+
+    /**
+     * Get attributable_leave_days_number
+     *
+     * @return integer 
+     */
+    public function getAttributableLeaveDaysNumber()
+    {
+        return $this->attributable_leave_days_number;
+    }
 }

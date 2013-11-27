@@ -12,6 +12,9 @@ Siciarek\LeaveManagementBundle\Entity\Leave:
         type:
             type: leave
 
+        status:
+            type: leave_status
+
         starts_at:
             type: date
 
@@ -38,5 +41,9 @@ Siciarek\LeaveManagementBundle\Entity\Leave:
     manyToOne:
         employee:
             targetEntity: Employee
+        covered_by:
+            targetEntity: Employee
         approved_by:
+            targetEntity: Manager
+        canceled_by:
             targetEntity: Manager

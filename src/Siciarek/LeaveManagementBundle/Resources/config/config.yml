@@ -8,6 +8,7 @@ doctrine:
             json: Sonata\Doctrine\Types\JsonType
             gender: Siciarek\LeaveManagementBundle\Doctrine\DBAL\Types\GenderType
             leave: Siciarek\LeaveManagementBundle\Doctrine\DBAL\Types\LeaveType
+            leave_status: Siciarek\LeaveManagementBundle\Doctrine\DBAL\Types\LeaveStatusType
         mapping_types:
             enum: string
             set: string

@@ -21,6 +21,8 @@ Siciarek\LeaveManagementBundle\Entity\Employee:
         email: ~
         enabled:
            type: boolean
+        attributable_leave_days_number:
+            type: smallint
         slug:
             type: string
             length: 128
