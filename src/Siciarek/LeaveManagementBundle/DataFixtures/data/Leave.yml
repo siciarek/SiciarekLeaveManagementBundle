@@ -1,19 +1,19 @@
 Leave:
-#    -
-#        employee: 1
-#        covered_by: 2
-#        starts_at: '2013-11-08'
-#        ends_at: '2013-11-08'
-#    -
-#        employee: 6
-#        covered_by: 3
-#        starts_at: '2013-11-11'
-#        ends_at: '2013-11-25'
-#    -
-#        employee: 4
-#        covered_by: 6
-#        starts_at: '2013-11-21'
-#        ends_at: '2013-12-03'
+    -
+        employee: 1
+        covered_by: 2
+        starts_at: '2013-11-08'
+        ends_at: '2013-11-08'
+    -
+        employee: 6
+        covered_by: 3
+        starts_at: '2013-11-11'
+        ends_at: '2013-11-25'
+    -
+        employee: 4
+        covered_by: 6
+        starts_at: '2013-11-21'
+        ends_at: '2013-12-03'
     -
         employee: 5
         covered_by: ~
