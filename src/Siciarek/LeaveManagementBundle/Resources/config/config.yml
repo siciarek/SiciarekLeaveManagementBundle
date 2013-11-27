@@ -1,0 +1,18 @@
+imports:
+    - { resource: admin.yml }
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        types:
+            json: Sonata\Doctrine\Types\JsonType
+        mapping_types:
+            enum: string
+            set: string
+            varbinary: string
+            tinyblob: text
+    orm:
+        entity_managers:
+            default:
+                mappings:
+                    SiciarekLeaveManagementBundle: ~

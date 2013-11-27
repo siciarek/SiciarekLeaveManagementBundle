@@ -1,0 +1,102 @@
+Sale: Sprzedaż
+Clients: Klienci
+Ad types: Typy reklam
+Prices: Warianty cenowe
+
+Client List: Klienci
+Ad Type List: Typy reklam
+Ad Price List: Warianty reklam
+
+free: bezpłatnie
+day: dzień
+week: tydzień
+mainpage: strona główna
+subpages: wszystkie podstrony
+
+errors:
+    no_image_file: Nie podano pliku graficznego ani odnośnika.
+    invalid_file_format: Obsługiwane rozszerzenia (EXTS), ten plik ma (EXT).
+    invalid_file_content: Niewłaściwa zawartość pliku.
+    invalid_image_size: Wymagany rozmiar (WIDTH x HEIGHT), ten plik ma (XWIDTH x XHEIGHT).
+
+tabs:
+    price:
+        price: Wariant
+    sale:
+        sale: Reklama
+        displaying_params: Parametry wyświetlania
+        url: URL
+    client:
+        basic_data: Dane podstawowe
+        invoice_data: Dane do faktury
+
+help:
+    sale:
+        title: 'Jeżeli tytuł nie zostanie podany, wprowadzona zostanie nazwa klienta.'
+        path: 'To pole zmieniamy tylko w przypadku gdy klient chce serwować plik graficzny z własnej lokalizacji.'
+
+general:
+    actions: Czynności
+
+type:
+    id: Numer
+    name: Nazwa
+    definition: Właściwości
+
+price:
+    description: Opis
+    mainpage: Str. główna
+    subpages: Podstrony
+    duration: Liczba jedn. czasu
+    period: Jednostka czasu
+    price: Cena
+    all_types: Wszystkie typy
+
+client:
+    id: Numer
+    enabled: Aktywny
+    name: Nazwa
+    email: Email
+    phone: Telefon
+    created_at: Data rejestracji
+    invoice_name: Nazwa
+    invoice_nip: NIP
+    invoice_address: Adres
+
+sale:
+    id: Numer
+    enabled: Włączona
+    displayed: Liczba wyświetleń
+    clicked: Liczba kliknięć
+    type: Typ
+    option: Wariant
+    client: Klient
+    title: Tytuł
+    leads_to: Prowadzi do
+    file: Plik
+    price: Opłata
+    exclusive: Na wyłączność
+    everlasting: Wieczna
+    starts_at: Data włączenia
+    ends_at: Data wyłączenia
+    path: Ścieżka
+
+click:
+    ad: Reklama
+    ip: Adres IP
+    geo: Dane geograficzne
+    browser: Przeglądarka
+    created_at: Czas
+
+
+geo:
+    host_name: Host
+    ip_address: Adres IP
+    country: Kraj
+    country_code: Kod kraju
+    region: Region
+    city: Miejscowość
+    postal_code: Kod pocz.
+    calling_code: Kod tel.
+    longitude: Lon
+    latitude: Lat
